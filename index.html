@@ -1,9 +1,81 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <meta charset="utf-9" />
+    <meta name="description" content="My first webpage, with MDL" />
+    <meta name="keywords" content="mths, ics2o" />
+    <meta name="author" content="Mohamad" />
+    <meta name="viewport" conent="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.lime-green.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>{$websiteTitle}</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">{$websiteHeader}</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href=""></a>
+            <a class="mdl-navigation__link" href=""></a>
+            <a class="mdl-navigation__link" href=""></a>
+            <a class="mdl-navigation__link" href=""></a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Navigate</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="./index2.html"
+            >Second Website</a
+          >
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!--Text below header-->
+          <div class="page-content">Enter number to calculate</div>
+          <!-- Numeric Textfield with Floating Label -->
+          <form action="#">
+            <div
+              class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+            >
+              <input
+                class="mdl-textfield__input"
+                type="text"
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                id="sample4"
+              />
+              <label class="mdl-textfield__label" for="sample4"
+                >Number...</label
+              >
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+          </form>
+          <!-- Accent-colored raised button with ripple -->
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="buttonClicked()"
+          >
+            Calculate
+          </button>
+        </div>
+        <div class="page-content">The answer is ...</div>
+      </main>
+    </div>
   </body>
 </html>
