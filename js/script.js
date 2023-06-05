@@ -1,8 +1,9 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2023 william siamrd All rights reserved
 //
-// Created by: Mohamad
-// Created on: Sep 2023
+// Created by: william
+// Created on: may 2023
 // This file contains the JS functions for index.html
+
 function buttonClicked() {
   alert("Hello, World!")
 }
